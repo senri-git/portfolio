@@ -1,0 +1,329 @@
+@charset "UTF-8";
+/*--------------------------
+          共通  
+--------------------------*/
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  color: #333;
+  font-family: Dosis, Helvetica Neue, Helvetica, Arial, Verdana, Roboto, "游ゴシック", Yu Gothic, "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3", Hiragino Kaku Gothic Pro, Meiryo UI, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", MS PGothic, sans-serif;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ゼロ幅スペースを擬似コンテンツとして追加（Safariでのバグ回避用） */
+ul li::before {
+  content: "\200B";
+}
+
+main section .inner {
+  margin: 20px 0;
+  padding-top: 48px;
+  margin-top: -48px;
+}
+
+main section .heading h1 {
+  background-color: #eee;
+  margin: 1rem;
+  padding: 10px;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+}
+
+main section .heading h1 span {
+  font-size: 16px;
+  color: #555;
+}
+
+main section h2 {
+  font-weight: bold;
+  line-height: 2rem;
+}
+
+/*--------------------------
+          ヘッダー
+--------------------------*/
+header {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: #fff;
+  opacity: 0.8;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1024px;
+  height: 48px;
+  padding: 0 0.8em;
+  margin: 0 auto;
+  font-size: 1.2em;
+}
+
+.header-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-nav-list {
+  display: inline-block;
+}
+
+.header-nav-item {
+  float: left;
+  padding: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #444;
+  text-align: center;
+  list-style: none;
+}
+
+.header-nav-item a {
+  text-decoration: none;
+}
+
+.header-ham {
+  display: none;
+}
+
+.menu2 {
+  width: 20px;
+  height: 3px;
+  margin: 4px 0;
+  margin-right: 0;
+  background-color: #333;
+}
+
+/* 選択中のメニュー */
+.select {
+  color: #444;
+}
+
+.header-nav-item:hover {
+  background: #444;
+  color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.logo {
+  width: auto;
+}
+
+/*--------------------------
+      ハンバーガーメニュー
+--------------------------*/
+.open,
+.close {
+  display: none;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  top: -50vw;
+}
+
+aside {
+  display: none;
+}
+
+aside .nav-item .fas {
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .open,
+  .close {
+    display: block;
+  }
+  .open {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 11;
+  }
+  aside {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: -100%;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    background: #fff;
+  }
+  aside .nav {
+    display: block;
+  }
+  aside .nav ul li {
+    padding-left: 10px;
+    line-height: 2rem;
+    border-top: #eee solid 1px fas;
+    border-top-display: block;
+    border-top-margin-right: 4px;
+  }
+  input[type="checkbox"]:checked ~ aside {
+    position: fixed;
+    top: 48px;
+  }
+  input[type="checkbox"]:checked ~ .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+  }
+}
+
+/*--------------------------
+        トップ画面
+--------------------------*/
+#hero {
+  background-image: url(../img/TopImage-sky.jpg);
+  background-size: cover;
+}
+
+#hero .inner {
+  margin-top: -16px;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#hero .inner .heading p {
+  font-size: 48px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+
+/*--------------------------
+        サービス&料金
+--------------------------*/
+#services .inner ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#services .inner ul li {
+  width: 30%;
+  text-align: center;
+}
+
+#services .inner ul li p {
+  text-align: left;
+}
+
+/*--------------------------
+        実績
+--------------------------*/
+/*--------------------------
+        プロフィール
+--------------------------*/
+#profile .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#profile img {
+  margin: 20px;
+  border-radius: 8px;
+  width: 50%;
+  height: 50%;
+  max-width: 200px;
+}
+
+#profile .text {
+  margin: 20px;
+  line-height: 2em;
+  margin-left: 20px;
+}
+
+#profile .text h2::before {
+  content: '▶ ';
+}
+
+#profile .text p span {
+  color: #ccc;
+}
+
+/*--------------------------
+        お問合せ
+--------------------------*/
+#contact {
+  text-align: center;
+  line-height: 2rem;
+}
+
+#contact .fab {
+  padding: 10px;
+}
+
+#contact .fab:hover {
+  background: #444;
+  color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 768px) {
+  .header-nav-list {
+    display: none;
+  }
+  .header-nav {
+    margin: 0 0 0 auto;
+  }
+  .header-ham {
+    display: block;
+  }
+}
+/*# sourceMappingURL=style.css.map */

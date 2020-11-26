@@ -1,0 +1,161 @@
+/*--------------------------
+          共通  
+--------------------------*/
+@charset "utf-8";
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	color: #333;
+	font-family: Dosis, Helvetica Neue, Helvetica, Arial, Verdana, Roboto,
+		"游ゴシック", Yu Gothic, "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3",
+		Hiragino Kaku Gothic Pro, Meiryo UI, "メイリオ", Meiryo, "ＭＳ Ｐゴシック",
+		MS PGothic, sans-serif;
+	font-size: 16px;
+}
+a {
+	text-decoration: none;
+	color: #333;
+}
+ul {
+	list-style: none;
+}
+/* ゼロ幅スペースを擬似コンテンツとして追加（Safariでのバグ回避用） */
+ul li::before {
+	content: "\200B";
+}
+/*--------------------------
+          ヘッダー
+--------------------------*/
+header {
+	box-sizing: border-box;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	background-color: #fff;
+	opacity: 0.8;
+}
+
+.header-inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1024px;
+	height: 48px;
+	padding: 0 0.8em;
+	margin: 0 auto;
+	font-size: 1.2em;
+}
+.header-nav {
+	display: flex;
+	padding: 0;
+	align-items: center;
+}
+.header-nav-list {
+	display: inline-block;
+}
+
+.header-nav-item {
+	float: left;
+	padding: 12px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #444;
+	text-align: center;
+	list-style: none;
+}
+
+.header-nav-item a {
+	text-decoration: none;
+}
+
+.header-ham {
+	display: none;
+}
+
+.menu2 {
+	width: 20px;
+	height: 3px;
+	margin: 4px 0;
+	margin-right: 0;
+	background-color: #333;
+}
+
+/* 選択中のメニュー */
+.select {
+	color: #444;
+}
+
+.header-nav-item:hover {
+	background: #444;
+	color: #fff;
+	transition: 0.5s;
+}
+
+.logo {
+	width: 370px;
+}
+/*--------------------------
+        トップ画面
+--------------------------*/
+.hero {
+	height: 977px;
+	height: 100vh;
+	background-image: url(../img/TopImage-sky.jpg);
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.hero .heading p {
+	font-size: 48px;
+	color: #fff;
+	font-weight: bold;
+}
+section .heading h1 {
+	margin: 20px;
+	font-size: 32px;
+	font-weight: bold;
+	text-align: center;
+}
+section .heading h1 span {
+	font-size: 16px;
+	color: #555;
+}
+/*--------------------------
+        プロフィール
+--------------------------*/
+.profile .container{
+  display: flex;
+}
+.profile .img{
+  
+}
+.profile .text{
+  line-height: 2em;
+}
+.profile .text p span{
+  color: #ccc;
+}
+
+
+@media screen and (max-width: 480px) {
+	.header-nav-list {
+		display: none;
+	}
+
+	.header-nav {
+		margin: 0 0 0 auto;
+	}
+
+	.header-ham {
+		display: block;
+	}
+}
+@media screen and (max-width: 768px) {
+}
