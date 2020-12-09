@@ -62,6 +62,20 @@ main section {
   }
 }
 
+.fa-twitter {
+  color: lightskyblue;
+}
+
+.animationTarget{
+  opacity: 0;
+  transition: .6s;
+  transform: translateY(20px);
+}
+.animationTarget.show{
+  opacity: 1;
+  transform: none;
+}
+
 /*--------------------------
           ヘッダー
 --------------------------*/
@@ -81,7 +95,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1024px;
   height: 48px;
   padding: 0 0.8em;
   margin: 0 auto;
@@ -112,27 +125,14 @@ header {
   text-decoration: none;
 }
 
+// ハンバーガーメニューの三本線
 .header-ham {
   display: none;
-}
-
-.menu2 {
-  width: 20px;
-  height: 3px;
-  margin: 4px 0;
-  margin-right: 0;
-  background-color: #333;
 }
 
 /* 選択中のメニュー */
 .select {
   color: #444;
-}
-
-.header-nav-item:hover {
-  background: #444;
-  color: #fff;
-  transition: 0.5s;
 }
 
 .logo {
@@ -142,85 +142,33 @@ header {
 /*--------------------------
       ハンバーガーメニュー
 --------------------------*/
-
-.open,
-.close {
+.ham-menu {
   display: none;
-}
-
-
-input[type="checkbox"] {
-  // checkboxは非表示にすると動作しないので画面外に表示させる
-  position: absolute;
-  top: -50vw;
-}
-
-aside {
-  display: none;
-  .nav-item .fas {
-    margin-right: 10px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-
-  .open,
-  .close {
-    // display:noneの上書きで表示させる
-    display: block;
-  }
-
-  .open {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    z-index: 11;
-  }
-
-  aside {
-    display: block;
-    width: 100%;
-    position: absolute;
-    top: -100%;
-    transition: all 0.2s;
-    background: #fff;
-
-    .nav {
-      display: block;
-
-      ul li {
-        padding-left: 10px;
-        line-height: 2rem;
-        border-top: #eee solid 1px fas {
-          display: block;
-          margin-right: 4px;
-        }
-      }
-    }
-  }
-
-  input[type="checkbox"]:checked~aside {
-    position: fixed;
-    top: 48px;
-  }
-
-  input[type="checkbox"]:checked~.back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-  }
 }
 
 /*--------------------------
         トップ画面
 --------------------------*/
+@keyframes titleAnimation{
+  0%{
+    transform: translateY(-30px);;
+    opacity: 0;
+  }
+}
+@keyframes heroImage{
+  0%{
+    opacity: 0;
+  }
+}
 #hero {
-  background-image: url(../img/TopImage-sky.jpg);
+  background-image: url(../img/TopImage-sky.png);
+  min-height: 100%;
   background-size: cover;
+  height: 100vh;
+  animation: heroImage 3s;
+
 
   .inner {
-    margin-top: -16px;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -228,9 +176,27 @@ aside {
 
     .heading p {
       font-size: 48px;
+      text-shadow: 3px 3px 3px #333;
       color: #fff;
       font-weight: bold;
       text-align: center;
+      animation: titleAnimation 2s;
+
+      span{
+        display: inline-block;
+      }
+
+    }
+
+    .heading .text {
+      text-align: center;
+      animation: titleAnimation 4s;
+      small {
+        line-height: 2rem;
+        span{
+          display: inline-block;
+        }
+      }
     }
   }
 }
@@ -262,17 +228,83 @@ aside {
 /*--------------------------
         実績
 --------------------------*/
+#works {
 
+  // 画像サイズを固定
+  .card-img-top {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+  }
+
+  .card-body {
+    height: 4rem;
+  }
+
+  .card-img-top:hover {
+    cursor: pointer;
+  }
+}
+
+.display {
+  justify-content: center;
+
+  .background {
+    display: block;
+    background: #111;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .1s, visibility .1s;
+
+    .close {
+      font-size: 3rem;
+      color: #eee;
+      opacity: 1;
+      margin-top: 1rem;
+      margin-right: 1rem;
+    }
+  }
+
+  .background.show {
+    visibility: visible;
+    opacity: .8;
+  }
+
+  .work01,
+  .work02,
+  .work03 {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    height: 80vh;
+    z-index: 100;
+    border: 8px solid #333;
+    box-shadow: 3px 3px 3px #111;
+    visibility: hidden;
+    transition: opacity .1s, visibility .1s;
+  }
+
+  .work01.show,
+  .work02.show,
+  .work03.show {
+    visibility: visible;
+    opacity: 1;
+  }
+}
 
 /*--------------------------
         プロフィール
 --------------------------*/
-// .profile{
-//   .profile-image{
-
-//     width: 100%;
-//   }
-// }
 #profile {
   .container {
     display: flex;
@@ -293,13 +325,17 @@ aside {
     line-height: 2em;
     margin-left: 20px;
 
+    h2 {
+      margin-top: 1rem;
+    }
+
     h2::before {
       content: '▶ ';
     }
   }
 
   .text p span {
-    color: #ccc;
+    display: inline-block;
   }
 }
 
@@ -322,6 +358,15 @@ aside {
   }
 }
 
+
+@media screen and (min-width: 1367px) {
+  .header-nav-item:hover {
+    background: #444;
+    color: #fff;
+    transition: 0.5s;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .header-nav-list {
     display: none;
@@ -331,7 +376,92 @@ aside {
     margin: 0 0 0 auto;
   }
 
+  // ハンバーガーメニューの三本線
   .header-ham {
     display: block;
+    position: relative;
+    width: 1.75rem;
+    height: 1.5rem;
+
+    i {
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: #333;
+      position: absolute;
+      transition: transform .5s, opacity .5s;
+    }
+
+    i:nth-child(1) {
+      top: 0;
+    }
+
+    i:nth-child(2) {
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+
+    i:nth-child(3) {
+      bottom: 0;
+    }
+  }
+
+  .header-ham.show {
+    i:nth-child(1) {
+      transform: translateY(10px) rotate(-45deg);
+    }
+
+    i:nth-child(2) {
+      opacity: 0;
+    }
+
+    i:nth-child(3) {
+      transform: translateY(-12px) rotate(45deg);
+    }
+  }
+
+  .ham-wrapper {
+    .ham-menu {
+      display: block;
+      background: rgba(29, 78, 134, 0.9);
+      position: fixed;
+      z-index: 99;
+      top: 3rem;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .1s, visibility .1s;
+
+      .nav-list {
+        width: 220px;
+        height: auto;
+        margin: 20% auto;
+        vertical-align: middle;
+
+        .nav-item {
+          height: 10vh;
+
+          a {
+            text-align: left;
+            display: block;
+            font-size: 1.5rem;
+            color: #eee;
+            margin: 0 auto;
+
+            .fas {
+              margin-right: 2rem;
+            }
+          }
+        }
+      }
+    }
+
+    .ham-menu.show {
+      opacity: 1;
+      visibility: visible;
+    }
   }
 }
