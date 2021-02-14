@@ -72,6 +72,11 @@ main section h2 {
           transform: none;
 }
 
+.text p span,
+.card-text span {
+  display: inline-block;
+}
+
 /*--------------------------
           ヘッダー
 --------------------------*/
@@ -257,11 +262,18 @@ header {
 /*--------------------------
         実績
 --------------------------*/
-#works .card-img-top {
+#works .card .img-cover {
+  background: #000;
+  overflow: hidden;
   width: 100%;
   height: 10rem;
+}
+
+#works .card-img-top {
   -o-object-fit: cover;
      object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 #works .card-body {
@@ -270,6 +282,11 @@ header {
 
 #works .card-img-top:hover {
   cursor: pointer;
+  opacity: 0.6;
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
 }
 
 .display {
@@ -367,10 +384,6 @@ header {
 
 #profile .text h2::before {
   content: '▶ ';
-}
-
-#profile .text p span {
-  display: inline-block;
 }
 
 /*--------------------------

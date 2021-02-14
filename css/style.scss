@@ -76,6 +76,12 @@ main section {
   transform: none;
 }
 
+// 不自然な改行防止
+.text p span,
+.card-text span  {
+  display: inline-block;
+}
+
 /*--------------------------
           ヘッダー
 --------------------------*/
@@ -230,11 +236,21 @@ header {
 --------------------------*/
 #works {
 
+  .card{
+    .img-cover{
+      background: #000;
+      overflow:hidden;
+      width: 100%;
+      height: 10rem;
+    }
+
+  }
   // 画像サイズを固定
   .card-img-top {
-    width: 100%;
-    height: 10rem;
     object-fit: cover;
+    width: 100%;
+    height: 100%;
+    
   }
 
   .card-body {
@@ -243,6 +259,9 @@ header {
 
   .card-img-top:hover {
     cursor: pointer;
+    opacity: 0.6;
+    transform: scale(1.2,1.2);
+    transition: all 0.8s;
   }
 }
 
@@ -334,9 +353,7 @@ header {
     }
   }
 
-  .text p span {
-    display: inline-block;
-  }
+
 }
 
 

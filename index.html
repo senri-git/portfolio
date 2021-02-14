@@ -1,30 +1,22 @@
 <!DOCTYPE html>
 <html lang="ja">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>SENRI Portfolio Site</title>
-		<link
-			rel="stylesheet"
-			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-			integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-			crossorigin="anonymous"
-		/>
-		<link rel="stylesheet" href="css/doctor-reset.css" />
-		<link rel="stylesheet" href="css/style.css" />
-		<script src="js/jquery.min.js"></script>
-		<script
-			src="https://kit.fontawesome.com/7b93c770f7.js"
-			crossorigin="anonymous"
-		></script>
-		<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.min.js"></script>
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-		/>
-	</head>
-	<body>
-		<!------------------------------------------------
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>SENRI Portfolio Site</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+	<link rel="stylesheet" href="css/doctor-reset.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<script src="js/jquery.min.js"></script>
+	<script src="https://kit.fontawesome.com/7b93c770f7.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+</head>
+
+<body>
+	<!------------------------------------------------
      【構成】
       1. ヘッダー
       2. ナビゲータ
@@ -36,226 +28,226 @@
       8. フッター
 -------------------------------------------------->
 
-		<div class="wrapper">
-			<!------------------------------------------------
+	<div class="wrapper">
+		<!------------------------------------------------
 			  * 1. ヘッダー
 -------------------------------------------------->
-			<header>
-				<div class="header-inner">
-					<div class="logo">
-						<p>Senri's Portfolio Site</p>
-					</div>
-					<!------------------------------------------------
+		<header>
+			<div class="header-inner">
+				<div class="logo">
+					<p>Senri's Portfolio Site</p>
+				</div>
+				<!------------------------------------------------
 					  * 2. ナビゲータ
 -------------------------------------------------->
-					<nav class="header-nav">
-						<ul class="header-nav-list">
-							<a href="#"><li class="header-nav-item">ホーム</li></a>
-							<a href="#services"><li class="header-nav-item">サービス&料金</li></a>
-							<a href="#works"><li class="header-nav-item">実績</li></a>
-							<a href="#profile"><li class="header-nav-item">プロフィール</li></a>
-							<a href="#contact"><li class="header-nav-item">お問合せ</li></a>
-							<a href="https://twitter.com/sedona_senri"
-								><li class="header-nav-item"><i class="fab fa-twitter"></i></li
-							></a>
-						</ul>
-									
-				<span class="header-ham">
-					<i></i>
-					<i></i>
-					<i></i>
-				</span>
-					</nav>
-				</div>
-			</header>
-			<!-- ハンバーガーメニュー -->
-			<aside class="ham-wrapper">
-				<nav class="ham-menu">
-					<ul class="nav-list">
-						<li class="nav-item">
-							<a href="#"
-								><label for="menu"><i class="fas fa-angle-right"></i>ホーム</label></a
-							>
-						</li>
-						<li class="nav-item">
-							<a href="#services"
-								><label for="menu"
-									><i class="fas fa-angle-right"></i>サービス&料金</label
-								></a
-							>
-						</li>
-						<li class="nav-item">
-							<a href="#works"
-								><label for="menu"><i class="fas fa-angle-right"></i>実績</label></a
-							>
-						</li>
-						<li class="nav-item">
-							<a href="#profile"
-								><label for="menu"
-									><i class="fas fa-angle-right"></i>プロフィール</label
-								></a
-							>
-						</li>
-						<li class="nav-item">
-							<a href="#contact"
-								><label for="menu"><i class="fas fa-angle-right"></i>お問合せ</label></a
-							>
-						</li>
-						<li class="nav-item">
-							<a href="https://twitter.com/sedona_senri"
-								><i class="fas fa-angle-right"></i>Twitter </a>
-						</li>
+				<nav class="header-nav">
+					<ul class="header-nav-list">
+						<a href="#">
+							<li class="header-nav-item">ホーム</li>
+						</a>
+						<a href="#services">
+							<li class="header-nav-item">サービス&料金</li>
+						</a>
+						<a href="#works">
+							<li class="header-nav-item">実績</li>
+						</a>
+						<a href="#profile">
+							<li class="header-nav-item">プロフィール</li>
+						</a>
+						<a href="#contact">
+							<li class="header-nav-item">お問合せ</li>
+						</a>
+						<a href="https://twitter.com/sedona_senri">
+							<li class="header-nav-item"><i class="fab fa-twitter"></i></li>
+						</a>
 					</ul>
-				</nav>
-			</aside>
 
-			<!------------------------------------------------
+					<span class="header-ham">
+						<i></i>
+						<i></i>
+						<i></i>
+					</span>
+				</nav>
+			</div>
+		</header>
+		<!-- ハンバーガーメニュー -->
+		<aside class="ham-wrapper">
+			<nav class="ham-menu">
+				<ul class="nav-list">
+					<li class="nav-item">
+						<a href="#"><label for="menu"><i class="fas fa-angle-right"></i>ホーム</label></a>
+					</li>
+					<li class="nav-item">
+						<a href="#services"><label for="menu"><i class="fas fa-angle-right"></i>サービス&料金</label></a>
+					</li>
+					<li class="nav-item">
+						<a href="#works"><label for="menu"><i class="fas fa-angle-right"></i>実績</label></a>
+					</li>
+					<li class="nav-item">
+						<a href="#profile"><label for="menu"><i class="fas fa-angle-right"></i>プロフィール</label></a>
+					</li>
+					<li class="nav-item">
+						<a href="#contact"><label for="menu"><i class="fas fa-angle-right"></i>お問合せ</label></a>
+					</li>
+					<li class="nav-item">
+						<a href="https://twitter.com/sedona_senri"><i class="fas fa-angle-right"></i>Twitter </a>
+					</li>
+				</ul>
+			</nav>
+		</aside>
+
+		<!------------------------------------------------
 			  * 3. トップ画面
 -------------------------------------------------->
-			<section id="hero">
+		<section id="hero">
+			<div class="inner">
+				<div class="heading">
+					<div class="copy">
+						<p>さあ、<span>理想</span><span>の未来へ</span> </p>
+					</div>
+					<div class="text mt-3 bg-light">
+						<small
+							class="mt-5 p-2 text-center text-primary  font-weight-bold h5 ">エンジニアが<span>あなたの課題に応えます</span></small>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<main>
+			<!------------------------------------------------
+				  * 4. サービス&料金
+-------------------------------------------------->
+			<section id="services">
 				<div class="inner">
 					<div class="heading">
-						<div class="copy">
-							<p>さあ、<span>理想</span><span>の未来へ</span> </p>
+						<h1>サービス&料金<br><span>services & price</span></h1>
+					</div>
+					<div class="container">
+						<div class="row mx-3">
+							<div class="col-md-4 bg-white text-center px-3 my-3 animationTarget">
+								<i class="far fa-file-alt fa-5x"></i>
+								<h2 class="mb-3">ランディングページ制作<br>（税込￥10,000～）</h2>
+								<p class="text-left mb-3">
+									お客様のご要望をヒアリングさせていただき、ご要望に合わせて最適なランディングページを制作いたします。レスポンシブ対応も可能です。
+								</p>
+							</div>
+							<div class="col-md-4 bg-white text-center px-3 my-3 animationTarget">
+								<i class="fas fa-laptop-code fa-5x"></i>
+								<h2 class="mb-3">ホームページ制作<br>（税込￥20,000～）</h2>
+								<p class="text-left mb-3">
+									お預かりしたデザインデータをもとに、ご要望に沿ったホームページを作成いたします。レスポンシブ対応もお任せください。
+								</p>
+							</div>
+							<div class="col-md-4 bg-white text-center px-3 my-3 animationTarget">
+								<i class="fab fa-wordpress-simple fa-5x"></i>
+								<h2 class="mb-3">WordPressサイト制作<br>（税込￥40,000～）</h2>
+								<p class="text-left mb-3">
+									お預かりしたデザインデータをもとに、WordPressを用いてWebサイトの構築をいたします。
+								</p>
+							</div>
 						</div>
-						<div class="text mt-3 bg-light">
-							<small class="mt-5 p-2 text-center text-primary  font-weight-bold h5 ">エンジニアが<span>あなたの課題に応えます</span></small>
+					</div>
+				</div>
+			</section>
+			<!------------------------------------------------
+				  * 5. 実績
+-------------------------------------------------->
+			<section id="works">
+				<div class="inner">
+					<div class="heading">
+						<h1>実績<br><span>works</span></h1>
+					</div>
+				</div>
+
+				<div class="container">
+					<div class="row mx-3">
+
+						<div class="col-md-4 animationTarget">
+							<div class="card mb-4 shadow-sm">
+								<div class="img-cover">
+
+									<a href="https://senri-git.github.io/ShiroDemo/">
+										<img class="card-img-top work05" src="img/Shiro_花屋LP.png" alt="Card image cap" />
+									</a>
+								</div>
+								<div class="card-body p-0 d-flex justify-content-center align-items-center">
+									<p class="card-text text-center">デザインカンプから<span>コーディング</span><br>デザイン：<a
+											href="https://twitter.com/omsss22">akane様</a></p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 animationTarget">
+							<div class="card mb-4 shadow-sm">
+								<div class="img-cover">
+									<a href="https://mono.senri-yane-blog.com">
+										<img class="card-img-top work04" src="img/mono模写.png" alt="Card image cap" />
+									</a>
+								</div>
+								<div class="card-body p-0 d-flex justify-content-center align-items-center">
+									<p class="card-text text-center">WordPressテーマ<br>「Mono」模写</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 animationTarget">
+							<div class="card mb-4 shadow-sm">
+								<div class="img-cover">
+
+									<img class="card-img-top work01" src="img/portfolio_site.png" alt="Card image cap" />
+								</div>
+								<div class="card-body p-0 d-flex justify-content-center align-items-center">
+									<p class="card-text text-center">ポートフォリオサイト</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 animationTarget">
+							<div class="card mb-4 shadow-sm">
+								<div class="img-cover">
+									<img class="card-img-top work02" src="img/模写_Write_書くためのテーマ.png" alt="Card image cap" />
+								</div>
+
+								<div class="card-body p-0 d-flex justify-content-center align-items-center">
+									<p class="card-text text-center">WordPressテーマ<br>「Write」模写</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 animationTarget">
+							<div class="card mb-4 shadow-sm">
+								<div class="img-cover">
+								<img class="card-img-top work03" src="img/架空サイトCafe店舗紹介.png" alt="Card image cap" />
+							</div>
+								<div class="card-body p-0 d-flex justify-content-center align-items-center">
+									<p class="card-text text-center ">Cafe店舗紹介<br>架空サイト</p>
+								</div>
+							</div>
 						</div>
 
 					</div>
 				</div>
 			</section>
-
-			<main>
-				<!------------------------------------------------
-				  * 4. サービス&料金
--------------------------------------------------->
-				<section id="services">
-					<div class="inner">
-						<div class="heading">
-							<h1>サービス&料金<br><span>services & price</span></h1>
-						</div>
-						<div class="container">
-							<div class="row mx-3">
-								<div class="col-md-4 bg-white text-center px-3 my-3 animationTarget">
-									<i class="far fa-file-alt fa-5x"></i>
-									<h2 class="mb-3">ランディングページ制作<br>（税込￥10,000～）</h2>
-									<p class="text-left mb-3">
-										お客様のご要望をヒアリングさせていただき、ご要望に合わせて最適なランディングページを制作いたします。レスポンシブ対応も可能です。
-									</p>
-								</div>
-								<div class="col-md-4 bg-white text-center px-3 my-3 animationTarget">
-									<i class="fas fa-laptop-code fa-5x"></i>
-									<h2 class="mb-3">ホームページ制作<br>（税込￥20,000～）</h2>
-									<p class="text-left mb-3">
-										お預かりしたデザインデータをもとに、ご要望に沿ったホームページを作成いたします。レスポンシブ対応もお任せください。
-									</p>
-								</div>
-								<div class="col-md-4 bg-white text-center px-3 my-3 animationTarget">
-									<i class="fab fa-wordpress-simple fa-5x"></i>
-									<h2 class="mb-3">WordPressサイト制作<br>（税込￥40,000～）</h2>
-									<p class="text-left mb-3">
-										お預かりしたデザインデータをもとに、WordPressを用いてWebサイトの構築をいたします。
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!------------------------------------------------
-				  * 5. 実績
--------------------------------------------------->
-				<section id="works">
-					<div class="inner">
-						<div class="heading">
-							<h1>実績<br><span>works</span></h1>
-						</div>
-					</div>
-
-					<div class="container">
-						<div class="row mx-3">
-
-						<div class="col-md-4 animationTarget">
-							<div class="card mb-4 shadow-sm">
-								<a href="https://mono.senri-yane-blog.com">
-								<img
-									class="card-img-top work04"
-									src="img/mono模写.png"
-									alt="Card image cap"
-								/>
-							</a>
-								<div class="card-body">
-									<p class="card-text text-center">WordPressテーマ「Mono」模写</p>
-								</div>
-							</div>
-						</div>
-							<div class="col-md-4 animationTarget">
-								<div class="card mb-4 shadow-sm">
-										<img
-										class="card-img-top work01"
-										src="img/portfolio_site.png"
-										alt="Card image cap"
-										/>
-									<div class="card-body">
-										<p class="card-text text-center">ポートフォリオサイト</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4 animationTarget">
-								<div class="card mb-4 shadow-sm">
-									<img
-										class="card-img-top work02"
-										src="img/模写_Write_書くためのテーマ.png"
-										alt="Card image cap"
-									/>
-									<div class="card-body">
-										<p class="card-text text-center">WordPressテーマ「Write」模写</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4 animationTarget">
-								<div class="card mb-4 shadow-sm">
-									<img
-										class="card-img-top work03"
-										src="img/架空サイトCafe店舗紹介.png"
-										alt="Card image cap"
-									/>
-									<div class="card-body">
-										<p class="card-text text-center">Cafe店舗紹介 架空サイト</p>
-									</div>
-								</div>
-							</div>
-
-						</div>
-					</div>
-				</section>
-				<!------------------------------------------------
+			<!------------------------------------------------
 				    * 6. プロフィール
 -------------------------------------------------->
-				<section id="profile">
-					<div class="inner">
-						<div class="heading">
-							<h1>プロフィール<br><span>profile</span></h1>
-						</div>
-						<div class="container">
-							<img
-								class="rounded-circle animationTarget"
-								src="img/face2016.jpg"
-								alt="プロフィール画像"
-							/>
-							<div class="text">
-								<div class="animationTarget">
+			<section id="profile">
+				<div class="inner">
+					<div class="heading">
+						<h1>プロフィール<br><span>profile</span></h1>
+					</div>
+					<div class="container">
+						<img class="rounded-circle animationTarget" src="img/face2016.jpg" alt="プロフィール画像" />
+						<div class="text">
+							<div class="animationTarget">
 
-								
+
 								<h2>自己紹介</h2>
 								<p class="ml-4">ITエンジニア 山田忠明</p>
 								<p class="ml-4">関西出身。物理を学びメーカーに就職</p>
 								<p class="ml-4">
 									個人で稼ぐ力を身に付けるため2020年11月からフリーランスとして活動中^^
 								</p>
-									<p class="ml-4">
-										お客様に心からご満足いただけるよう全力で対応させていただきます。
-									</p>
+								<p class="ml-4">
+									お客様に心からご満足いただけるよう全力で対応させていただきます。
+								</p>
 							</div>
 							<div class="animationTarget">
 								<h2>スキル・資格</h2>
@@ -263,70 +255,66 @@
 									HTML / CSS / Sass / Bootstrap / jQuery / WordPress / PHP / C / C++ / C# / <span>応用情報技術者</span>
 								</p>
 							</div>
-							</div>
 						</div>
-					</div>
-				</section>
-				<!------------------------------------------------
-				  * 7. お問合せ
--------------------------------------------------->
-				<section id="contact">
-					<div class="inner">
-						<div class="heading">
-							<h1>お問合せ<br><span>contact</span></h1>
-						</div>
-						<p>TwitterのDMからお問い合わせください。</p>
-						<a class="animationTarget" href="https://twitter.com/sedona_senri">
-							<i class="fab fa-twitter fa-3x"></i>
-						</a>
-
-					</div>
-				</section>
-			</main>
-
-			<!------------------------------------------------
-			    * 8. フッター
--------------------------------------------------->
-			<footer class="bg-secondary">
-				<p class="text-center py-3">Copyright © 2020 <a href="#" class="text-decoration-none">Senri.</a>  All Rights Reserved.</p>
-			</footer>
-
-			<!-- 実績全体表示 -->
-			<aside class="display">
-				<div class="background">
-					<div class="hedding">
-						<button class="close" title="Close">×</button>
 					</div>
 				</div>
-				<img class="work01 lazyload" data-src="img/gallery/work01.png" alt="ポートフォリオサイト">
-				<img class="work02 lazyload" data-src="img/gallery/work02.png" alt="WordPressテーマ「Write」模写">
-				<img class="work03 lazyload" data-src="img/gallery/work03.png" alt="カフェ店舗紹介架空サイト">
-				</nav>
-			</aside>
-		</div>
-		<!-- END wrapper -->
+			</section>
+			<!------------------------------------------------
+				  * 7. お問合せ
+-------------------------------------------------->
+			<section id="contact">
+				<div class="inner">
+					<div class="heading">
+						<h1>お問合せ<br><span>contact</span></h1>
+					</div>
+					<p>TwitterのDMからお問い合わせください。</p>
+					<a class="animationTarget" href="https://twitter.com/sedona_senri">
+						<i class="fab fa-twitter fa-3x"></i>
+					</a>
 
-		<script	type="text/javascript" src="js/main.js"></script>
+				</div>
+			</section>
+		</main>
 
-		<!-- Optional JavaScript -->
-		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-		<script
-			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-			crossorigin="anonymous"
-		></script>
-		<script
-			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-			crossorigin="anonymous"
-		></script>
-		<script
-			src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-			integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-			crossorigin="anonymous"
-		></script>
-		<script>
-			lazyload();
+		<!------------------------------------------------
+			    * 8. フッター
+-------------------------------------------------->
+		<footer class="bg-secondary">
+			<p class="text-center py-3">Copyright © 2020 <a href="#" class="text-decoration-none">Senri.</a> All Rights
+				Reserved.</p>
+		</footer>
+
+		<!-- 実績全体表示 -->
+		<aside class="display">
+			<div class="background">
+				<div class="hedding">
+					<button class="close" title="Close">×</button>
+				</div>
+			</div>
+			<img class="work01 lazyload" data-src="img/gallery/work01.png" alt="ポートフォリオサイト">
+			<img class="work02 lazyload" data-src="img/gallery/work02.png" alt="WordPressテーマ「Write」模写">
+			<img class="work03 lazyload" data-src="img/gallery/work03.png" alt="カフェ店舗紹介架空サイト">
+			</nav>
+		</aside>
+	</div>
+	<!-- END wrapper -->
+
+	<script type="text/javascript" src="js/main.js"></script>
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+		crossorigin="anonymous"></script>
+	<script>
+		lazyload();
 	</script>
-	</body>
+</body>
+
 </html>
