@@ -27,11 +27,6 @@ ul {
   list-style: none;
 }
 
-/* ゼロ幅スペースを擬似コンテンツとして追加（Safariでのバグ回避用） */
-ul li::before {
-  content: "\200B";
-}
-
 main section {
   .inner {
     margin: 20px 0;
@@ -66,19 +61,20 @@ main section {
   color: lightskyblue;
 }
 
-.animationTarget{
+.animationTarget {
   opacity: 0;
   transition: .6s;
   transform: translateY(20px);
 }
-.animationTarget.show{
+
+.animationTarget.show {
   opacity: 1;
   transform: none;
 }
 
 // 不自然な改行防止
 .text p span,
-.card-text span  {
+.card-text span {
   display: inline-block;
 }
 
@@ -155,17 +151,19 @@ header {
 /*--------------------------
         トップ画面
 --------------------------*/
-@keyframes titleAnimation{
-  0%{
-    transform: translateY(-30px);;
+@keyframes titleAnimation {
+  0% {
+    transform: translateY(-30px);
     opacity: 0;
   }
 }
-@keyframes heroImage{
-  0%{
+
+@keyframes heroImage {
+  0% {
     opacity: 0;
   }
 }
+
 #hero {
   background-image: url(../img/TopImage-sky.png);
   min-height: 100%;
@@ -173,33 +171,99 @@ header {
   height: 100vh;
   animation: heroImage 3s;
 
-
   .inner {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 
+    // スクロールダウン
+    a {
+      display: inline-block;
+      position: absolute;
+      right: 40px;
+      bottom: 0;
+      z-index: 2;
+      padding: 10px 10px 110px;
+      overflow: hidden;
+      color: #333;
+      font-size: 1rem;
+      font-family: 'Josefin Sans', sans-serif;
+      text-shadow: 2px 2px 4px #fff;
+      line-height: 1;
+      letter-spacing: .2rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      writing-mode: vertical-lr;
+    }
+
+    a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 1px;
+      height: 100px;
+      background: #333;
+    }
+
+    a::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 1px;
+      height: 100px;
+      background: rgba(255, 255, 255, .4);
+    }
+
+    a::after {
+      animation: sdl 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+    }
+
+    @keyframes sdl {
+      0% {
+        transform: scale(1, 0);
+        transform-origin: 0 0;
+      }
+
+      50% {
+        transform: scale(1, 1);
+        transform-origin: 0 0;
+      }
+
+      50.1% {
+        transform: scale(1, 1);
+        transform-origin: 0 100%;
+      }
+
+      100% {
+        transform: scale(1, 0);
+        transform-origin: 0 100%;
+      }
+    }
+
     .heading p {
-      font-size: 48px;
+      font-size: 3rem;
       text-shadow: 3px 3px 3px #333;
       color: #fff;
       font-weight: bold;
       text-align: center;
       animation: titleAnimation 2s;
 
-      span{
+      span {
         display: inline-block;
       }
-
     }
 
     .heading .text {
       text-align: center;
       animation: titleAnimation 4s;
+
       small {
         line-height: 2rem;
-        span{
+
+        span {
           display: inline-block;
         }
       }
@@ -226,7 +290,6 @@ header {
           text-align: left;
         }
       }
-
     }
   }
 }
@@ -236,21 +299,21 @@ header {
 --------------------------*/
 #works {
 
-  .card{
-    .img-cover{
+  .card {
+    .img-cover {
       background: #000;
-      overflow:hidden;
+      overflow: hidden;
       width: 100%;
       height: 10rem;
     }
 
   }
+
   // 画像サイズを固定
   .card-img-top {
     object-fit: cover;
     width: 100%;
     height: 100%;
-    
   }
 
   .card-body {
@@ -260,7 +323,7 @@ header {
   .card-img-top:hover {
     cursor: pointer;
     opacity: 0.6;
-    transform: scale(1.2,1.2);
+    transform: scale(1.2, 1.2);
     transition: all 0.8s;
   }
 }
@@ -334,9 +397,8 @@ header {
   img {
     margin: 20px;
     border-radius: 8px;
-    width: 50%;
-    height: 50%;
-    max-width: 200px;
+    width: 200px;
+    height: 200px;
   }
 
   .text {
@@ -351,9 +413,17 @@ header {
     h2::before {
       content: '▶ ';
     }
+
+    .skill {
+
+      width: 20%;
+      height: 160px;
+
+      .fa-star {
+        font-size: .8rem;
+      }
+    }
   }
-
-
 }
 
 
@@ -382,9 +452,20 @@ header {
     color: #fff;
     transition: 0.5s;
   }
+  #profile{
+    .container{
+      position: relative;
+      img{
+        position: absolute;
+        top: 10px;
+        right: 150px;
+        display: flex;
+      }
+    }
+  }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .header-nav-list {
     display: none;
   }
@@ -479,6 +560,23 @@ header {
     .ham-menu.show {
       opacity: 1;
       visibility: visible;
+    }
+  }
+
+  #profile {
+    .text{
+
+      .skill{
+        width: 50%;
+        margin: 0;
+      }
+      .skill:last-of-type {
+        
+        margin-right: -10px;
+        margin-left: -10px;
+        width: 130px;
+        
+      }
     }
   }
 }
