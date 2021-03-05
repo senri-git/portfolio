@@ -489,6 +489,14 @@ header {
   font-size: .8rem;
 }
 
+#profile .text .skill .fas.fa-star {
+  color: gold;
+}
+
+#profile .text .skill .far.fa-star {
+  color: #ddd;
+}
+
 /*--------------------------
         お問合せ
 --------------------------*/
