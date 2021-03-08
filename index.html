@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="css/doctor-reset.css" />
 	<link rel="stylesheet" href="css/style.css" />
 	<link rel="stylesheet" href="magnific-popup.css" />
+	<link rel="stylesheet" href="mailform/css/mailform.css" />
 
 
 	<!-- favicon -->
@@ -383,11 +384,23 @@
 					<div class="heading">
 						<h1>お問合せ<br><span>contact</span></h1>
 					</div>
-					<p>TwitterのDMからお問い合わせください。</p>
-					<a class="animationTarget" href="https://twitter.com/sedona_senri">
+					<p class="text">TwitterのDMか下記フォームからお問い合わせください。</p>
+					<a class="twitter animationTarget" href="https://twitter.com/sedona_senri">
 						<i class="fab fa-twitter fa-3x"></i>
 					</a>
-
+					<form action="mailform/php/mailform.php" method="post" id="mail_form">
+						<dl>
+							<dt>お名前<span>Your Name</span></dt>
+							<dd class="required">
+								<input type="text" id="name_1" name="name_1" value="" />
+							<dt>メールアドレス<span>Mail Address</span></dt>
+							<dd class="required"><input type="email" id="mail_address" name="mail_address" value="" /></dd>
+							<dt>お問い合わせ内容<span>Contents</span></dt>
+							<dd class="required"><textarea id="contents" name="contents" cols="40" rows="5"></textarea></dd>
+						</dl>
+	
+						<p id="form_submit"><input type="button" id="form_submit_button" value="送信する" /></p>
+					</form>
 				</div>
 			</section>
 		</main>
@@ -432,6 +445,9 @@
 		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
 		crossorigin="anonymous"></script>
 
+	<!-- 問い合わせフォーム用 -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script src="mailform/js/mailform-js.php"></script>
 </body>
 
 </html>

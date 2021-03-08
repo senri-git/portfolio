@@ -8,12 +8,12 @@ form#mail_form * {
 
 form#mail_form {
 	width: 960px;
-	margin: 50px auto;
+	margin: 0 auto 40px;
 	padding: 10px 0;
 	background: #ffffff;
-	border: 1px solid #cccccc;
-	border-radius: 7px;
-	box-shadow: 0 0 7px rgba( 0, 0, 0, 0.2 );
+	/* border: 1px solid #cccccc; */
+	/* border-radius: 7px; */
+	/* box-shadow: 0 0 7px rgba( 0, 0, 0, 0.2 ); */
 	font-size: 95%;
 	line-height: 1.8;
 }
@@ -26,7 +26,7 @@ form#mail_form dl {
 
 form#mail_form dl dt {
 	clear: both;
-	width: 30%;
+	width: 21%;
 	float: left;
 	border-top: 1px solid #cccccc;
 	padding: 15px 0;
@@ -35,7 +35,7 @@ form#mail_form dl dt {
 }
 
 form#mail_form dl dd {
-	width: 65%;
+	width: 79%;
 	float: right;
 	border-top: 1px solid #cccccc;
 	padding: 15px 0 15px 5%;
@@ -205,12 +205,12 @@ form#mail_form input#read_2,
 form#mail_form input#postal,
 form#mail_form input#phone,
 form#mail_form input#schedule {
-	width: 30%;
+	width: 90%;
 }
 
 form#mail_form input#mail_address,
 form#mail_form input#mail_address_confirm {
-	width: 80%;
+	width: 90%;
 }
 
 form#mail_form input#postal + a {
@@ -260,7 +260,9 @@ form#mail_form input[type="button"]:hover {
 }
 
 form#mail_form input#form_submit_button {
-	margin-left: 35%;
+	/* margin-left: 35%; */
+	display: flex;
+	margin: 0 auto;
 }
 
 

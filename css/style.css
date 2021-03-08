@@ -500,9 +500,19 @@ header {
 /*--------------------------
         お問合せ
 --------------------------*/
-#contact {
+#contact .heading, #contact .text {
   text-align: center;
   line-height: 2rem;
+}
+
+#contact a.twitter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem auto 0;
+  width: 4rem;
+  height: 4rem;
+  text-decoration: none;
 }
 
 #contact .fab {
@@ -510,10 +520,9 @@ header {
 }
 
 #contact .fab:hover {
-  background: #444;
-  color: #fff;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  opacity: 0.7;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 @media screen and (min-width: 1367px) {

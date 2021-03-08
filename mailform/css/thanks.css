@@ -16,6 +16,7 @@ div#thanks {
 	box-shadow: 0 0 7px rgba( 0, 0, 0, 0.2 );
 	font-size: 95%;
 	line-height: 1.8;
+	text-align: center;
 }
 
 div#thanks h1,
@@ -35,7 +36,9 @@ div#thanks p {
 	width: 90%;
 	margin: 0 auto;
 	margin-top: 2em;
+	text-align: left;
 }
+
 
 div#thanks dl {
 	width: 90%;

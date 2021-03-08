@@ -23,22 +23,25 @@ body {
 
 <form action="mailform/php/mailform.php" method="post" id="mail_form">
 	<dl>
-		<dt>会社名<span>Company Name</span></dt>
-		<dd><input type="text" id="company" name="company" value="" /></dd>
+		<!-- <dt>会社名<span>Company Name</span></dt>
+		<dd><input type="text" id="company" name="company" value="" /></dd> -->
 		
-		<dt>名前<span>Your Name</span></dt>
-		<dd class="required"><input type="text" id="name_1" name="name_1" value="" /> <input type="text" id="name_2" name="name_2" value="" /></dd>
+		<dt>お名前<span>Your Name</span></dt>
+		<dd class="required">
+			<input type="text" id="name_1" name="name_1" value="" />
+			<!-- <input type="text" id="name_2" name="name_2" value="" /> -->
+		</dd>
 		
-		<dt>ふりがな<span>Name Reading</span></dt>
-		<dd><input type="text" id="read_1" name="read_1" value="" /> <input type="text" id="read_2" name="read_2" value="" /></dd>
+		<!-- <dt>ふりがな<span>Name Reading</span></dt>
+		<dd><input type="text" id="read_1" name="read_1" value="" /> <input type="text" id="read_2" name="read_2" value="" /></dd> -->
 		
 		<dt>メールアドレス<span>Mail Address</span></dt>
 		<dd class="required"><input type="email" id="mail_address" name="mail_address" value="" /></dd>
 		
-		<dt>メールアドレス<br />(確認用)<span>Mail Address Confirm</span></dt>
-		<dd><input type="email" id="mail_address_confirm" name="mail_address_confirm" value="" /></dd>
+		<!-- <dt>メールアドレス<br />(確認用)<span>Mail Address Confirm</span></dt>
+		<dd><input type="email" id="mail_address_confirm" name="mail_address_confirm" value="" /></dd> -->
 		
-		<dt>性別<span>Gender</span></dt>
+		<!-- <dt>性別<span>Gender</span></dt>
 		<dd>
 			<ul>
 				<li><label><input type="radio" class="gender" name="gender" value="男性" />男性</label></li>
@@ -120,13 +123,13 @@ body {
 				<li><label><input type="checkbox" class="response" name="response[]" value="メールでの返信を希望" />メールでの返信を希望</label></li>
 				<li><label><input type="checkbox" class="response" name="response[]" value="返信不要" />返信不要</label></li>
 			</ul>
-		</dd>
+		</dd> -->
 		
-		<dt>お問い合わせの内容<span>Contents</span></dt>
+		<dt>お問い合わせ内容<span>Contents</span></dt>
 		<dd class="required"><textarea id="contents" name="contents" cols="40" rows="5"></textarea></dd>
 		
-		<dt>愛の告白<span>Message</span></dt>
-		<dd><textarea id="message" name="message" cols="40" rows="5"></textarea></dd>
+		<!-- <dt>愛の告白<span>Message</span></dt>
+		<dd><textarea id="message" name="message" cols="40" rows="5"></textarea></dd> -->
 	</dl>
 	
 	<p id="form_submit"><input type="button" id="form_submit_button" value="送信する" /></p>
